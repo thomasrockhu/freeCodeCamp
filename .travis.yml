@@ -28,4 +28,6 @@ jobs:
         - npm run lint
 
     - stage: Unit and Integration tests
-      script: npm test
+      script:
+        - npm test
+        - bash <(curl -s https://codecov.io/bash)
