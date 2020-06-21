@@ -27,3 +27,6 @@ deploy:
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -F curriculum

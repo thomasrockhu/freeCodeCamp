@@ -18,7 +18,7 @@
     "lint": "gulp lint",
     "semantic-release": "semantic-release",
     "pretest": "cd ../client && npm run build:workers",
-    "test": "mocha --delay --reporter progress --bail"
+    "test": "nyc report --reporter=text-lcov mocha --delay --reporter progress --bail"
   },
   "dependencies": {
     "invariant": "^2.2.4"
@@ -56,6 +56,7 @@
     "live-server": "^1.2.1",
     "lodash": "^4.17.15",
     "mocha": "5.2.0",
+    "nyc": "^15.1.0",
     "puppeteer": "^1.19.0",
     "readdirp-walk": "^1.7.0",
     "rx": "^4.1.0",
